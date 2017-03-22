@@ -1,6 +1,6 @@
 // Main App Ctrl
 
-angular.module('base-auth.controllers')
+angular.module('starter.controllers')
 
 .controller('AppCtrl', function($scope){
 

@@ -24,12 +24,17 @@ var port = process.env.PORT || 5000;
 
 
 // Middlewares
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 app.use(cookieParser());
 
-
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 // Database connection
 var mongoose = require('mongoose');
@@ -73,12 +78,12 @@ if ('production' == app.get('env')) {
 app.use('/api', require('./api-manifest'));
 
 app.get('/', function(req, res){
-	res.send('base-auth');
+	res.send('starter');
 });
 
 
 
 // Start the server listening
 app.listen(port, function(){
-	console.log('base-auth listening on port', port);
+	console.log('starter listening on port', port);
 });

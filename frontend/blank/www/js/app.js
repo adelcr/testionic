@@ -1,7 +1,7 @@
 
 // Main Application JS
 
-angular.module("base-auth", ["ionic", "base-auth.controllers", "base-auth.services", "base-auth.directives"])
+angular.module("starter", ["ionic", "starter.controllers", "starter.services"])
 
 .run(function($ionicPlatform) {
 
@@ -21,53 +21,16 @@ angular.module("base-auth", ["ionic", "base-auth.controllers", "base-auth.servic
 
 })
 
-.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-	
-    $stateProvider
+.config(function($stateProvider, $urlRouterProvider) {
 
-    .state("get-started", {
-        abstract: true,
-        url: "/get-started",
-        controller: "GetStartedCtrl",
-        templateUrl: "templates/get-started/get-started-view.html"
-    })
+    $stateProvider.state("admin-login", {
+        url: "/login",
+        templateUrl: "templates/login-view.html",
+        controller: "LoginCtrl"
+    });
 
-    .state("get-started.welcome", {
-        url: "/welcome",
-        views: {
-            "get-started": {
-                templateUrl: "templates/get-started/welcome-view.html",
-                controller: "WelcomeCtrl"
-            }
-        }
-    })
-
-    .state("get-started.create-profile", {
-        url: "/create-profile",
-        views: {
-            "get-started": {
-                templateUrl: "templates/get-started/create-profile-view.html",
-                controller: "CreateProfileCtrl"
-            }
-        }
-    })
-
-    .state("get-started.user-created", {
-        url: "/user-created",
-        views: {
-            "get-started": {
-                templateUrl: "templates/get-started/user-created-view.html",
-                controller: "UserCreatedCtrl"
-            }
-        }
-    })
-
-    ;
-
-    // Use the auth token interceptor to append the auth_token to every request
-    $httpProvider.interceptors.push('AuthTokenInterceptor');
 
     // Fallback to this route
-    $urlRouterProvider.otherwise("/get-started/welcome");
+    $urlRouterProvider.otherwise("/login");
 
 });

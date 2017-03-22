@@ -1,8 +1,8 @@
 // User Service
 
-angular.module('base-auth.services')
+angular.module('starter.services')
 
-.factory('User', function($q, $http, API) {
+.factory('Admin', function($q, $http, API) {
 
     return {
 
@@ -10,9 +10,9 @@ angular.module('base-auth.services')
 
     		var deferred = $q.defer();
 
-        	$http.get(API.user.get)
-        		.success(function(user){
-        			deferred.resolve(user);
+        	$http.get(API.admin.get)
+        		.success(function(admin){
+        			deferred.resolve(admin);
         		})
         		.error(function(){
         			deferred.reject('You are not authenticated.');
@@ -23,40 +23,23 @@ angular.module('base-auth.services')
 
     	},
 
-        login: function(loginForm) {
+      login: function(loginForm) {
 
-            var deferred = $q.defer();
+        var deferred = $q.defer();
 
-            $http.post(API.user.login, loginForm)
-                .success(function(user){
-                    deferred.resolve(user);
-                })
-                .error(function(err){
-                    deferred.reject(err);
-                })
-            ;
+        $http.post(API.admin.login, loginForm)
+            .success(function(admin){
+                deferred.resolve(admin);
+                Console.log(admin);
+            })
+            .error(function(err){
+                deferred.reject(err);
+            })
+        ;
 
-            return deferred.promise;
+        return deferred.promise;
 
-        },
-
-        create: function(profileForm) {
-
-        	var deferred = $q.defer();
-
-        	$http.post(API.user.create, profileForm)
-        		.success(function(createdUser){
-        			deferred.resolve(createdUser);
-        		})
-        		.error(function(err){
-        			deferred.reject(err);
-        		})
-        	;
-
-        	return deferred.promise;
-
-        }
-        
+      }
     }
 
 })

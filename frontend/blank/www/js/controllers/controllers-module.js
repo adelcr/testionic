@@ -1,1 +1,1 @@
-angular.module('base-auth.controllers',[]);
+angular.module('starter.controllers',[]);

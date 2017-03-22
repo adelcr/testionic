@@ -1,8 +1,8 @@
 // Login Ctrl
 
-angular.module('base-auth.controllers')
+angular.module('starter.controllers')
 
-.controller('LoginCtrl', function($scope, $ionicModal, $ionicPopup, AuthService, User, Storage){
+.controller('LoginCtrl', function($scope, $ionicModal, $ionicPopup, Admin){
 
 	console.log('LoginCtrl');
 
@@ -30,10 +30,8 @@ angular.module('base-auth.controllers')
 
 		console.log($scope.loginForm);
 
-		User.login($scope.loginForm).then(
+    Admin.login($scope.loginForm).then(
 			function(response) {
-				Storage.set('authToken', response.authToken);
-				AuthService.loginConfirmed();
 				$scope.modal.hide();
 			},
 			function(err) {

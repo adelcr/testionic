@@ -1,6 +1,6 @@
 // Constants for the API
 
-angular.module('base-auth.services')
+angular.module('starter.services')
 
 .factory('API', function(){
 
@@ -8,15 +8,14 @@ angular.module('base-auth.services')
 	var apiUrl = 'http://localhost:5000/api';
 
 	// Base Routes
-	var baseUserRoute = apiUrl + '/user';
+	var baseAdminRoute = apiUrl + '/admin';
 
 	return {
 
-		// User Routes
-		user: {
-			get: baseUserRoute + '/get'
-			, create: baseUserRoute + '/create'
-			, login: baseUserRoute +'/login'
+		// Admin Routes
+		admin: {
+			get: baseAdminRoute + '/get'
+			, login: baseAdminRoute +'/login'
 		}
 
 	}
