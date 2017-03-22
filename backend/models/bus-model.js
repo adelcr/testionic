@@ -7,6 +7,7 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose');
+
 var Schema = mongoose.Schema;
 
 /**
@@ -17,18 +18,17 @@ var BusSchema = new Schema({
     Description: {
         type: String,
         default: '',
-        trim: true,
+        index: true,
         required: 'Descrition cannot be blank'
     },
     Dispo: {
         type: Boolean,
-        trim: true
+        index: true
     },
     NbPassager: {
-        type: number,
-        trim: true
+        type: Number,
+        index: true
     }
 });
-var b = new BusSchema;
-b.save(callback);
-module.exports = mongoose.model('Bus', BusSchema);
+
+module.exports = mongoose.model('Bu', BusSchema);

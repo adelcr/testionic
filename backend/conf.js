@@ -6,6 +6,7 @@ var conf = {};
 conf.joe = "HEY THERE";
 
 // Development configuration
+/*
 if (process.env.NODE_ENV === 'development') {
 
 	conf.mongo_config = {
@@ -21,24 +22,21 @@ if (process.env.NODE_ENV === 'development') {
 		}
 	};
 
-}
+}*/
 
 // Production configuration
-if (process.env.NODE_ENV === 'production') {
 
 	conf.mongo_config = {
-		'dbname' : 'hsanlist',
-		'host' : 'ds135700.mlab.com',
-		'port' : 35700,
+		'dbname' : 'transco',
+		'host' : 'ds131320.mlab.com',
+		'port' : 31320,
 		'auth' : {
-			'name': 'hsan',
-			'pass': 'hsan'
+			'name': 'adelcr',
+			'pass': 'azeqsdwxc123'
 		},
 		connect_string: function(){
 			return 'mongodb://' + this.auth.name + ':' + this.auth.pass + '@' + this.host + ':' + this.port + '/' + this.dbname;
 		}
 	};
-
-}
 
 module.exports = conf;
