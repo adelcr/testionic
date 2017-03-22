@@ -13,12 +13,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 /**
- * Bus Schema
+ * Reseau Schema
  */
 
 var ReseauBus = new Schema({
 
-    NbrLignes: number,
-    Title:String
+    NbrLignes:{type:number,
+                index:true},
+    Title:{type:String,
+            index: true}
 });
 module.exports = mongoose.model('Reseau', ReseauBus);

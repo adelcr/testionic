@@ -18,7 +18,10 @@ var Date = new Schema({
 
 });
 var CommandSchema = new Schema({
-
+    Idguichetier:{
+        type: Schema.ObjectId,
+        ref: 'guichetier'
+    },
     Lignes:[{
         type: Schema.ObjectId,
         ref: 'Ligne',
