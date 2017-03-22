@@ -6,8 +6,8 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 /**
  * PosBus Schema
@@ -17,16 +17,19 @@ var PosBusSchema = new Schema({
     latitude : {
         type: number,
         default: '',
+        index: true,
         trim: true
     },
     longitude: {
         type: number,
+        index: true,
         default: ''
     },
     bus: {
         type: Schema.ObjectId,
+        index: true,
         ref: 'Bus'
     }
 });
 
-mongoose.model('PosBus', PosBusSchema);
+module.exports = mongoose.model('PosBu', PosBusSchema);
