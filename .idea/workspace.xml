@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d189d58-4910-40af-a841-cfdcd1155fd3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/models/paiement/comptePaiement-model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/models/paiement/duree-model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/models/paiement/guichetier-model.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backend/models/paiement/historique-module.js" afterPath="$PROJECT_DIR$/backend/models/paiement/adminPaiement-model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/paiement/commande-model.js" afterPath="$PROJECT_DIR$/backend/models/paiement/commande-model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/paiement/reseau-model.js" afterPath="$PROJECT_DIR$/backend/models/paiement/reseau-model.js" />
-    </list>
+    <list default="true" id="0d189d58-4910-40af-a841-cfdcd1155fd3" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -26,18 +18,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reseau-model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/models/paiement/reseau-model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              <folding>
-                <element signature="e#48#95#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="commande-model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/models/paiement/commande-model.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketElectronique-model.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TicketElectronique-model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/models/paiement/TicketElectronique-model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-135">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -124,6 +104,16 @@
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base-user-route.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/routes/user/base-user-route.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1500">
+              <caret line="100" column="8" lean-forward="true" selection-start-line="100" selection-start-column="8" selection-end-line="101" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -183,6 +173,7 @@
         <option value="$PROJECT_DIR$/backend/models/paiement/duree-model.js" />
         <option value="$PROJECT_DIR$/backend/models/paiement/adminPaiement-model.js" />
         <option value="$PROJECT_DIR$/backend/models/paiement/comptePaiement-model.js" />
+        <option value="$PROJECT_DIR$/backend/models/paiement/TicketElectronique-model.js" />
       </list>
     </option>
   </component>
@@ -568,12 +559,12 @@
       <workItem from="1489951292218" duration="346000" />
       <workItem from="1489951719009" duration="2452000" />
       <workItem from="1490173274169" duration="1182000" />
-      <workItem from="1490189112255" duration="5934000" />
+      <workItem from="1490189112255" duration="6612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19389000" />
+    <option name="totallyTimeSpent" value="20067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -851,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/routes/user/base-user-route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="100" column="8" lean-forward="true" selection-start-line="100" selection-start-column="8" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/models/ligne-model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -973,6 +956,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/models/paiement/TicketElectronique-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/bus/base-bus-route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -983,13 +976,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/models/paiement/TicketElectronique-model.js">
+    <entry file="file://$PROJECT_DIR$/backend/routes/user/base-user-route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="1500">
+          <caret line="100" column="8" lean-forward="true" selection-start-line="100" selection-start-column="8" selection-end-line="101" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
