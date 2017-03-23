@@ -6,8 +6,6 @@
 var path = require('path');
 var validator = require('validator');
 var Voyageur = require(path.resolve(__dirname, '../../models/voyageur-model'));
-var ErrorMessages = require(path.resolve(__dirname, '../../util/error-messages'));
-var AuthToken = require(path.resolve(__dirname, '../../util/application-auth/auth-token'));
 
 exports.create = function(req, res) {
 
@@ -68,33 +66,25 @@ exports.login = function(req, res) {
     }
 
 
-    Voyageur.findOne({login: login}, function(err, voyageur) {
+    Voyageur.findOne({'User.login': login}, function(err, voyageur) {
 
         if (err) {
             return res.status(500).json({ message: ErrorMessages.unknown });
         }
 
         if (!voyageur) {
+            console.log(Voyageur.findOne({'User.login' : login}));
             return res.status(400).json({ message: "Woops, wrong email or password." });
         }
 
-        if (voyageur.authenticate(password)) {
+        if (voyageur.User.password===password) {
 
-            var authToken = AuthToken.create(email, voyageur._id);
 
-            voyageur.authToken = authToken;
 
-            voyageur.save(function(err) {
-
-                if (err) {
-                    return res.status(500).json({ message: ErrorMessages.unknown });
-                } else {
-                    return res.status(200).json({ message: "OK", authToken: authToken });
-                }
-
-            });
+            return res.status(400).json({ message: 'Connection valide' });
 
         } else {
+
             return res.status(400).json({ message: 'Invalid Credentials' });
         }
 
@@ -102,8 +92,3 @@ exports.login = function(req, res) {
 
 };
 
-exports.get = function(req, res) {
-
-    return res.status(200).json(req.voyageur.toObject({ virtuals: true }));
-
-};

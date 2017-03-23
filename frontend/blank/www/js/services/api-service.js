@@ -8,16 +8,16 @@ angular.module('starter.services')
 	var apiUrl = 'http://localhost:5000/api';
 
 	// Base Routes
-	//var baseAdminRoute = apiUrl + '/admin';
+	var baseAdminRoute = apiUrl + '/admin';
   var baseVoyageurRoute = apiUrl + '/voyageur';
 
 	return {
 
-		/* Admin Routes
+		// Admin Routes
 		admin: {
 			get: baseAdminRoute + '/get'
 			, login: baseAdminRoute +'/login'
-		},*/
+		},
     // Admin Routes
     voyageur: {
        get: baseVoyageurRoute + '/get'

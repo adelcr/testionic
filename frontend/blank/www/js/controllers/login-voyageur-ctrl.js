@@ -35,6 +35,7 @@ angular.module('starter.controllers')
       Voyageur.login($scope.loginForm).then(
         function(response) {
           $scope.modal.hide();
+
         },
         function(err) {
           $ionicPopup.alert({
