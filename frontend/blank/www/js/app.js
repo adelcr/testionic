@@ -21,15 +21,25 @@ angular.module("starter", ["ionic", "starter.controllers", "starter.services"])
 
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
 
-    $stateProvider.state("admin-login", {
+    $stateProvider
+      .state("admin-login", {
         url: "/login",
         templateUrl: "templates/login-view.html",
         controller: "LoginCtrl"
-    });
+        })
+      .state("voyageur-login",{
+        url: "/login-voyageur",
+        templateUrl: "templates/login-voyageur-view.html",
+        controller: "LoginVoyageurCtrl"
+
+        })
+      ;
 
 
+  // Use the auth token interceptor to append the auth_token to every request
+    $httpProvider.interceptors.push('AuthTokenInterceptor');
     // Fallback to this route
     $urlRouterProvider.otherwise("/login");
 

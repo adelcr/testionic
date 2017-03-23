@@ -6,8 +6,8 @@ angular.module('starter.controllers')
 
 	console.log('AppCtrl');
 
-	$scope.$on('user:set', function(event, user){
-		$scope.user = user;
+	$scope.$on('voyageur:set', function(event, voyageur){
+		$scope.voyageur = voyageur;
 	});
 
 });

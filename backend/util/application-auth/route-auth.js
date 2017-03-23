@@ -3,19 +3,19 @@
 var	passport = require("passport");
 var path = require('path');
 var BearerStrategy = require("passport-http-bearer").Strategy;
-var User = require(path.resolve(__dirname, '../../models/user-model'));
+var Voyageur = require(path.resolve(__dirname, '../../models/voyageur-model'));
 
 // Use Bearer Strategy as authentication
 passport.use(new BearerStrategy(
     function(token, done) {
-        User.findOne({ authToken: token }, function (err, user) {
+        Voyageur.findOne({ authToken: token }, function (err, voyageur) {
             if (err) { return done(err); }
-            if (!user) { return done(null, false); }
-            return done(null, user, { scope: 'all' });
+            if (!voyageur) { return done(null, false); }
+            return done(null, voyageur, { scope: 'all' });
         });
     }
 ));
 
 module.exports = {
     protect: passport.authenticate('bearer', { session: false })
-}
+};

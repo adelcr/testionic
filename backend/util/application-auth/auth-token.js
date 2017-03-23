@@ -4,14 +4,14 @@ var uuid = require('node-uuid');
 var jwt = require('jwt-simple');
 var jwtKey = 'Doo ts doo ts dance party.';
 
-exports.create = function(email, userId) {
+exports.create = function(email, VoyageurId) {
     
-    var userObject = {
+    var voyageurObject = {
         email: email,
-        userId: userId,
+        VoyageurId: VoyageurId,
         issuedAt: new Date(),
         entropy: uuid.v4()
     };
 
-    return jwt.encode(userObject, jwtKey);
+    return jwt.encode(voyageurObject, jwtKey);
 }

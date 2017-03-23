@@ -1,4 +1,4 @@
 /**
  * Created by Adel on 22/03/2017.
  */
-angular.module("starter.services",[]);
+angular.module("starter.services",['http-auth-interceptor']);
