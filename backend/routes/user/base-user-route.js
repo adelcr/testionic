@@ -3,8 +3,6 @@
 var path = require('path');
 var validator = require('validator');
 var User = require(path.resolve(__dirname, '../../models/user-model'));
-var ErrorMessages = require(path.resolve(__dirname, '../../util/error-messages'));
-var AuthToken = require(path.resolve(__dirname, '../../util/application-auth/auth-token'));
 
 exports.create = function(req, res) {
 
@@ -95,11 +93,5 @@ exports.login = function(req, res) {
         }
 
     });
-
-};
-
-exports.get = function(req, res) {
-
-	return res.status(200).json(req.user.toObject({ virtuals: true }));
 
 };
